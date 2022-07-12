@@ -14,3 +14,24 @@
     <%= yield %>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let params = new URLSearchParams({
+      access_key: '38decf9c721d075f0818a48768d887e5',
+      limit: 10
+    })
+    fetch(`http://api.aviationstack.com/v1/flights?${params}`)
+    .then(res => res.json()).then(console.log);
+  </script>
+</body>
+</html>
